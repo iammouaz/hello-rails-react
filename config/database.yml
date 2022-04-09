@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  username : postgres #username of db
+  password : moaz #password of db, if no password then make it blank
+
+development:
+  <<: *default
+  database: hello_rails_react
+
+test:
+  <<: *default
+  database: hello_rails_react
+
+production:
+  <<: *default
+  database: hello_rails_react
